@@ -12,11 +12,11 @@ Task 4: Submit this project and the HTML project to canvas. Once you have submit
 
 ***DO NOT ATTEMPT STRETCH UNTIL YOU ARE FINISHED WITH EVERYTHING ELSE!***
 
-Stretch Task: Fork your final work and see how much you can change the design without changing the HTML.  Try to transform the site by only using CSS selectors.
+Stretch Task #1 : Fork your final work and see how much you can change the design without changing the HTML.  Try to transform the site by only using CSS selectors.
+ 
+Stretch Task #2: Look at CSS animations and see if you could integrate them on the navigation hovers.
 
-Stretch Task: Look at CSS animations and see if you could integrate them on the navigation hovers.
-
-Stretch Task: Pick a navigation item and create a new page with the same header and footer as the home page.  Example: you could make a new page just for cookies.  Be creative and have fun coming up with your own unique content and styles. 
+Stretch Task #3: Pick a navigation item and create a new page with the same header and footer as the home page.  Example: you could make a new page just for cookies.  Be creative and have fun coming up with your own unique content and styles. 
 
 */
 
@@ -26,11 +26,12 @@ Stretch Task: Pick a navigation item and create a new page with the same header 
    color: #3C373B;
 }
 h1 {
-	font-family: 'Gaegu', cursive;
+	font-family: 'Parisienne', cursive;
 	margin: 20px 0;
 	/*=======  Update the font size to 60px and center the text */
    font-size: 60px;
    text-align: center;
+   color: #4e036b;
    }
    
    h2, h3, h4, h5, h6 {
@@ -56,7 +57,12 @@ h1 {
    /*======= Create a selector for ALL images in the site to have the following styles: 
    */
    img{
-	border-radius: 10px;
+   border-radius: 50%; /* Stretch Task #1: Changed IMG to oval */
+   border: #4e036b dotted 3px; /* Stretch Task #1: Adds border to IMG */
+}
+header img{
+   border-radius: 0%;
+   border: none;  /* Stretch Task #1: Header IMG different */
 }
 
    
@@ -77,22 +83,20 @@ h1 {
    
    .container header nav a {
 	margin: 0 10px;
-	border: 1px solid lightgray;
 	padding: 20px;
-	display: inline-block;
-	border-radius: 20px;
+	display: inline-block; /* Stretch Task #1: Change up the Top Nav */
 	color: white;
 	text-decoration: none;
 	margin-bottom: 20px;
     /*======= create a background property. Set the value to #F87B99 */
-    background: #F87B99; /* Can use background-color as well, background acts like border and can take values for all background selectors, background also acts like a reset. */
+    background: #4e036b; /* Can use background-color as well, background acts like border and can take values for all background selectors, background also acts like a reset. */
 	
    }
    
-   .container header nav a:hover {
+   .container header nav a:hover { /* Stretch Task #1: Change up the Top Nav Hover*/
    /*======= create a background property and set it to white.  Then create a color property and set it's value to pink. */
-   background: white;
-   color: pink;
+   background: black;
+   color: white;
    }
    
    /*======= Create a selector for the about section to have the following styles:*/
@@ -101,8 +105,9 @@ h1 {
    }
    
    .contact-section {
-	border-top: 1px dashed black;
-	padding: 20px 0;
+	border-top: 10px dotted #4e036b;
+   padding: 20px 0px;
+   margin-top: 20px;
    }
    
    .contact-section h2 {
@@ -117,8 +122,8 @@ h1 {
    
    footer {
 	width: 100%;
-	background: #F87B99;
-	border-top: 1px dashed white;
+	background: black;
+   border-top: 1px dashed white;/* Stretch Task #1: Change up line */
    }
    
    footer .footer-content { 
@@ -129,7 +134,8 @@ h1 {
    
    footer .footer-content h3 {
 	padding: 0;
-	margin: 20px 0;
+   margin: 20px 0;
+   color: antiquewhite;
    }
    
    footer nav {
@@ -139,9 +145,23 @@ h1 {
    /*======= Create a selector for the anchor tag in the footer to have the following styles:*/
    footer a{
    margin: 10px;
-	color: black;
-   text-decoration: underline;
-   }
+   color: antiquewhite;
+   text-decoration: underline; 
+   animation-duration: 3s; 
+   animation-name: slide;
+    }
+    /* Stretch Task #2: adds a slide in to footer nav */
+    @keyframes slide {
+      from {
+        margin-left: 100%;
+        width: 300%; 
+      }
+    
+      to {
+        margin-left: 0%;
+        width: 100%;
+      }
+    }
    
    
    
@@ -151,13 +171,14 @@ h1 {
    
    /*======= Create a hover state for the anchor tag in the footer nav to have the following styles:   */
    footer a:hover{
-      color: white;
+      color: peru;
    }
       
    footer .footer-content .copyright {
 	padding: 20px 0;
     /*======= center the text here */
     text-align: center;
+    color: antiquewhite;
    }
 
    /* Code as is has different spacing than example image. Text and headings not alining perfectly attributing it differing browsers / settings */
